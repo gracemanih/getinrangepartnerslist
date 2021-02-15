@@ -9,7 +9,7 @@ const morgan = require('morgan');
 let partners = require('./partners.json');
 var partnerController = require('./partnerController.js');
 
-
+// ADD COMMENT TO 
 
 // defining the Express app
 const app = express();
@@ -54,6 +54,6 @@ app.get('/getInRangePartnersDetails', (req, res) => {
 
 
 // starting the server
-app.listen(3001, () => {
-  console.log('listening on port 3001');
+app.listen(5000, () => {
+  console.log('listening on port 5000');
 });

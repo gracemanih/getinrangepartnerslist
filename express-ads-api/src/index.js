@@ -39,21 +39,21 @@ app.use(morgan('combined'));
 
 
 var meetingCoordinates = {lat:51.5144636,lng:-0.142571};
-var range = 1000;
+//var range = 1000;
 
 // Operarion to getInRangePartnersDetails
 app.get('/getInRangePartnersDetails', (req, res) => {
 	
 	var inRangePartners = [];
-	
+	var range = req.param('range');
+	console.log("range == "+range);
 	inRangePartners.push(partnerController.getInRangePartnersDetails(partners, meetingCoordinates, range));	
-	
 	
 	res.send(inRangePartners);
 });
 
 
 // starting the server
-app.listen(5000, () => {
+app.listen(3004, () => {
   console.log('listening on port 5000');
 });
